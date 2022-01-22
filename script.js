@@ -18,38 +18,38 @@ function generatePassword(){
   }
   alert(`You have chosen the generated password to be ${userLength} characters`);
 //variables for user confirmed choices in characters (uppercase, lowercase, num, special chars) and force user to pick at least 1 set of characters
-var userUpperCase = confirm("Would you like your password to include upper case characters?");
+var userUpperCase = confirm("Would you like your password to include upper case characters? Press OK for yes and cancel for no");
 if (userUpperCase){
   alert("You have chosen the generator to include upper case characters in your password");
 }
-var userLowerCase = confirm("Would you like your password to include lower case characters?");
+var userLowerCase = confirm("Would you like your password to include lower case characters? Press OK for yes and cancel for no");
 if (userLowerCase){
   alert("You have chosen the generator to include lower case characters in your password");
 }
-var userNumChar = confirm("Would you like your password to include numerical characters?");
+var userNumChar = confirm("Would you like your password to include numerical characters? Press OK for yes and cancel for no");
 if (userNumChar){
   alert("You have chosen the generator to include numerical characters in your password");
 }
-var userSpecialChar = confirm("Would you like your password to include special characters?");
+var userSpecialChar = confirm("Would you like your password to include special characters? Press OK for yes and cancel for no");
 if (userSpecialChar){
   alert("You have chosen the generator to include special characters in your password");
 }
 
 while (!userUpperCase && !userLowerCase && !userNumChar && !userSpecialChar){
   alert("You must choose at least one set of characters in your password");
-  var userUpperCase = confirm("Would you like your password to include upper case characters?");
+  var userUpperCase = confirm("Would you like your password to include upper case characters? Press OK for yes and cancel for no");
 if (userUpperCase){
   alert("You have chosen the generator to include upper case characters in your password");
 }
-var userLowerCase = confirm("Would you like your password to include lower case characters?");
+var userLowerCase = confirm("Would you like your password to include lower case characters? Press OK for yes and cancel for no");
 if (userLowerCase){
   alert("You have chosen the generator to include lower case characters in your password");
 }
-var userNumChar = confirm("Would you like your password to include numerical characters?");
+var userNumChar = confirm("Would you like your password to include numerical characters? Press OK for yes and cancel for no");
 if (userNumChar){
   alert("You have chosen the generator to include numerical characters in your password");
 }
-var userSpecialChar = confirm("Would you like your password to include special characters?");
+var userSpecialChar = confirm("Would you like your password to include special characters? Press OK for yes and cancel for no");
 if (userSpecialChar){
   alert("You have chosen the generator to include special characters in your password");
 }
