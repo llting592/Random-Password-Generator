@@ -17,7 +17,7 @@ function generatePassword(){
     var userLength = prompt("How long would you like your generated password to be? (Please choose a value between 8-128)");
   }
   alert(`You have chosen the generated password to be ${userLength} characters`);
-//variables for user confirmed choices in characters (uppercase, lowercase, num, special chars)
+//variables for user confirmed choices in characters (uppercase, lowercase, num, special chars) and force user to pick at least 1 set of characters
 var userUpperCase = confirm("Would you like your password to include upper case characters?");
 if (userUpperCase){
   alert("You have chosen the generator to include upper case characters in your password");
@@ -35,6 +35,15 @@ if (userSpecialChar){
   alert("You have chosen the generator to include special characters in your password");
 }
 
+while (!userUpperCase && !userLowerCase && !userNumChar && !userSpecialChar){
+  alert("You must choose at least one set of characters in your password")
+  var userUpperCase = confirm("Would you like your password to include upper case characters?");
+  var userLowerCase = confirm("Would you like your password to include lower case characters?");
+  var userNumChar = confirm("Would you like your password to include numerical characters?");
+  var userSpecialChar = confirm("Would you like your password to include special characters?");
+}
+
+//to actually include the above choices to be eligible in generated password
 var passwordChar = [];
       
 if (userSpecialChar) {
@@ -55,7 +64,7 @@ if (userUpperCase) {
 
   console.log(passwordChar)
 
-  //to actually generate and return a password based on the above choices
+  //for the page to actually generate and return a password based on the above choices
   var passwordOutput = "";
   
   for (var i = 0; i < userLength; i++) {
