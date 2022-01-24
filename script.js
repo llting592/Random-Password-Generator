@@ -12,7 +12,7 @@ var specialChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", "
 function generatePassword(){
   //User password length selection (between 8-128 characters) and to force user to pick a valid option
   var userLength = prompt("How long would you like your generated password to be? (Please choose a value between 8-128)");
-  while (userLength < 8 || userLength > 128){
+  while (userLength < 8 || userLength > 128 || isNaN(userLength)){
     alert("Please pick a value between 8-128");
     var userLength = prompt("How long would you like your generated password to be? (Please choose a value between 8-128)");
   }
@@ -78,8 +78,10 @@ if (userUpperCase) {
 
   //for the page to actually generate and return a password based on the above choices
   var passwordOutput = "";
+  console.log("before for loop");
   
   for (var i = 0; i < userLength; i++) {
+    console.log("after for loop");
     passwordOutput = passwordOutput + passwordChar[Math.floor(Math.random() * passwordChar.length)];
     console.log(passwordOutput);
   }
